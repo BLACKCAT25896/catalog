@@ -26,7 +26,30 @@ class _LoginPageState extends State<LoginPage> {
               fontWeight: FontWeight.bold,
             ),
           ),
-          TextFormField(),
+          SizedBox(
+            height: 20.0,
+          ),
+          Padding(
+            padding:
+                const EdgeInsets.symmetric(horizontal: 32.0, vertical: 16.0),
+            child: Column(
+              children: [
+                TextFormField(
+                  decoration: InputDecoration(
+                      hintText: "Enter Your UserName", labelText: "UserName"),
+                ),
+                TextFormField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                      hintText: "Enter Your Password", labelText: "Password"),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 20.0,
+          ),
+          ElevatedButton(onPressed: () {}, child: Text("Login"))
         ],
       ),
     );
