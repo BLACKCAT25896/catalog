@@ -1,14 +1,5 @@
 class CatalogModel {
-  static final items = [
-    Item(
-        id: 1,
-        name: "Iphone 6",
-        description: "Iphone 6 256 GD ROM 8 GB RAM",
-        price: 999,
-        color: "#1c1c1c",
-        image:
-            "https://www.mobiledokan.com/wp-content/uploads/2019/03/Apple-iPhone-8-Black.jpg")
-  ];
+  static List<Item> items;
 }
 
 class Item {
@@ -26,4 +17,22 @@ class Item {
       this.price,
       this.color,
       this.image});
+  factory Item.fromMap(Map<String, dynamic> map) {
+    return Item(
+      id: map["id"],
+      name: map["name"],
+      description: map["description"],
+      price: map["price"],
+      color: map["color"],
+      image: map["image"],
+    );
+  }
+  toMap() => {
+        "id": id,
+        "name": name,
+        "description": description,
+        "price": price,
+        "color": color,
+        "image": image,
+      };
 }

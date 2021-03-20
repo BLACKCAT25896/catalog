@@ -1,69 +1,68 @@
 {
-    "products": [
-        {
-            "id" : 1,
-            "name" : "Iphone 6",
-            "description" : "Iphone 6 256 GD ROM 8 GB RAM",
-            "price" : 999,
-            "color" : "#1c1c1c",
-            "image" : "https://www.mobiledokan.com/wp-content/uploads/2019/03/Apple-iPhone-8-Black.jpg"
-        },
-          {
-            "id" : 2,
-            "name" : "Iphone 7 plus",
-            "description" : "Iphone 7 plus 256 GD ROM 8 GB RAM",
-            "price" : 456,
-            "color" : "#1c1c1c",
-            "image" : "https://www.mobiledokan.com/wp-content/uploads/2019/03/Apple-iPhone-8-Black.jpg"
-        },
-          {
-            "id" : 3,
-            "name" : "Iphone 7",
-            "description" : "Iphone 7 256 GD ROM 8 GB RAM",
-            "price" : 767,
-            "color" : "#1c1c1c",
-            "image" : "https://www.mobiledokan.com/wp-content/uploads/2019/03/Apple-iPhone-8-Black.jpg"
-        },
-          {
-            "id" : 4,
-            "name" : "Iphone 8",
-            "description" : "Iphone 8 256 GD ROM 8 GB RAM",
-            "price" : 877,
-            "color" : "#1c1c1c",
-            "image" : "https://www.mobiledokan.com/wp-content/uploads/2019/03/Apple-iPhone-8-Black.jpg"
-        },
-          {
-            "id" : 5,
-            "name" : "Iphone 8 pro",
-            "description" : "Iphone 8 pro 256 GD ROM 8 GB RAM",
-            "price" : 567,
-            "color" : "#1c1c1c",
-            "image" : "https://www.mobiledokan.com/wp-content/uploads/2019/03/Apple-iPhone-8-Black.jpg"
-        },
-          {
-            "id" : 6,
-            "name" : "Iphone 10",
-            "description" : "Iphone 10 256 GD ROM 8 GB RAM",
-            "price" : 999,
-            "color" : "#1c1c1c",
-            "image" : "https://www.mobiledokan.com/wp-content/uploads/2019/03/Apple-iPhone-8-Black.jpg"
-        },
-          {
-            "id" : 7,
-            "name" : "Iphone 12",
-            "description" : "Iphone 12 256 GD ROM 8 GB RAM",
-            "price" : 799,
-            "color" : "#1c1c1c",
-            "image" : "https://www.mobiledokan.com/wp-content/uploads/2019/03/Apple-iPhone-8-Black.jpg"
-        },
-          {
-            "id" : 8,
-            "name" : "Iphone 12 pro max",
-            "description" : "Iphone 12 pro max 256 GD ROM 8 GB RAM",
-            "price" : 986,
-            "color" : "#1c1c1c",
-            "image" : "https://fdn.gsmarena.com/imgroot/reviews/20/apple-iphone-12-pro-max/lifestyle/-1200w5/gsmarena_008.jpg"
-        }
-
-    ]
+  "products": [
+    {
+      "id": 1,
+      "name": "Iphone 6",
+      "description": "Iphone 6 256 GD ROM 8 GB RAM",
+      "price": 999,
+      "color": "#1c1c1c",
+      "image": "https://www.mobiledokan.com/wp-content/uploads/2019/03/Apple-iPhone-8-Black.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Iphone 7 plus",
+      "description": "Iphone 7 plus 256 GD ROM 8 GB RAM",
+      "price": 456,
+      "color": "#1c1c1c",
+      "image": "https://www.mobiledokan.com/wp-content/uploads/2019/03/Apple-iPhone-8-Black.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Iphone 7",
+      "description": "Iphone 7 256 GD ROM 8 GB RAM",
+      "price": 767,
+      "color": "#1c1c1c",
+      "image": "https://www.mobiledokan.com/wp-content/uploads/2019/03/Apple-iPhone-8-Black.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Iphone 8",
+      "description": "Iphone 8 256 GD ROM 8 GB RAM",
+      "price": 877,
+      "color": "#1c1c1c",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-pro-blue-hero?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1604021661000"
+    },
+    {
+      "id": 5,
+      "name": "Iphone 8 pro",
+      "description": "Iphone 8 pro 256 GD ROM 8 GB RAM",
+      "price": 567,
+      "color": "#1c1c1c",
+      "image": "https://www.mobiledokan.com/wp-content/uploads/2019/03/Apple-iPhone-8-Black.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Iphone 10",
+      "description": "Iphone 10 256 GD ROM 8 GB RAM",
+      "price": 999,
+      "color": "#1c1c1c",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone11-select-2019-family?wid=882&hei=1058&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1567022175704"
+    },
+    {
+      "id": 7,
+      "name": "Iphone 12",
+      "description": "Iphone 12 256 GD ROM 8 GB RAM",
+      "price": 799,
+      "color": "#1c1c1c",
+      "image": "https://www.mobiledokan.com/wp-content/uploads/2019/03/Apple-iPhone-8-Black.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Iphone 12 pro max",
+      "description": "Iphone 12 pro max 256 GD ROM 8 GB RAM",
+      "price": 986,
+      "color": "#1c1c1c",
+      "image": "https://fdn.gsmarena.com/imgroot/reviews/20/apple-iphone-12-pro-max/lifestyle/-1200w5/gsmarena_008.jpg"
+    }
+  ]
 }
