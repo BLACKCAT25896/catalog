@@ -16,8 +16,10 @@ class MyTheme {
   static ThemeData darkTheme(BuildContext context) => ThemeData(
         brightness: Brightness.dark,
         fontFamily: GoogleFonts.poppins().fontFamily,
+        cardColor: Colors.black,
+        canvasColor: darkCreamColor,
         appBarTheme: AppBarTheme(
-          color: Colors.white,
+          color: Colors.black,
           elevation: 0.0,
           iconTheme: IconThemeData(color: Colors.black),
           textTheme: Theme.of(context).textTheme,
