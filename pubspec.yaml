@@ -25,6 +25,8 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.0
   google_fonts: ^2.0.0
+  image_picker: ^0.7.3
+  url_launcher: ^6.0.2
   velocity_x: ^2.6.0
 
 dev_dependencies:

@@ -20,7 +20,7 @@ class CatalogList extends StatelessWidget {
               MaterialPageRoute(
                   builder: (context) => DetailsPage(catalog: catalog))),
           child: CatalogItem(catalog: catalog),
-        );
+        ).pSymmetric(v: 8, h: 4);
       },
     );
   }
@@ -46,8 +46,11 @@ class CatalogItem extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            catalog.name.text.bold.lg.color(MyTheme.darkBlueshColor).make(),
-            catalog.description.text.textStyle(context.captionStyle).make(),
+            catalog.name.text.bold.lg.color(context.theme.accentColor).make(),
+            catalog.description.text
+                .textStyle(context.captionStyle)
+                .color(context.theme.accentColor)
+                .make(),
             10.heightBox,
             ButtonBar(
               alignment: MainAxisAlignment.spaceBetween,
@@ -55,9 +58,7 @@ class CatalogItem extends StatelessWidget {
               children: [
                 "\$ ${catalog.price}".text.bold.xl.make(),
                 ElevatedButton(
-                  onPressed: () {
-                    
-                  },
+                  onPressed: () {},
                   style: ButtonStyle(
                     backgroundColor:
                         MaterialStateProperty.all(MyTheme.darkBlueshColor),
@@ -72,6 +73,6 @@ class CatalogItem extends StatelessWidget {
           ],
         ))
       ],
-    )).white.rounded.square(150).p16.make();
+    )).color(context.theme.cardColor).rounded.square(150).p16.make();
   }
 }
