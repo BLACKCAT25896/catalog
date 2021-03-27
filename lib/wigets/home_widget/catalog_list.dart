@@ -1,6 +1,8 @@
+import 'package:catalog/models/cart.dart';
 import 'package:catalog/models/catalog.dart';
 import 'package:catalog/pages/home_detail_page.dart';
 import 'package:catalog/utils/routes.dart';
+import 'package:catalog/wigets/home_widget/add_to_cart.dart';
 import 'package:catalog/wigets/home_widget/catalog_image.dart';
 import 'package:catalog/wigets/themes.dart';
 import 'package:flutter/material.dart';
@@ -57,7 +59,7 @@ class CatalogItem extends StatelessWidget {
               buttonPadding: EdgeInsets.zero,
               children: [
                 "\$ ${catalog.price}".text.bold.xl.make(),
-                _AddToCart()
+                AddToCart(catalog: catalog)
               ],
             ).pOnly(right: 8.0)
           ],
@@ -67,33 +69,3 @@ class CatalogItem extends StatelessWidget {
   }
 }
 
-class _AddToCart extends StatefulWidget {
-  const _AddToCart({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  __AddToCartState createState() => __AddToCartState();
-}
-
-class __AddToCartState extends State<_AddToCart> {
-  bool isAdded = false;
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {
-        isAdded = isAdded.toggle();
-        setState(() {
-                  
-                });
-      },
-      style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all(MyTheme.darkBlueshColor),
-        shape: MaterialStateProperty.all(
-          StadiumBorder(),
-        ),
-      ),
-      child: isAdded? Icon(Icons.done): "Buy".text.make(),
-    );
-  }
-}
