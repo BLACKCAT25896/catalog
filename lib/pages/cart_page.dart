@@ -25,12 +25,17 @@ class CartPage extends StatelessWidget {
 class _CartTotal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final _cart = CartModel();
     return SizedBox(
       height: 200,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          "\$9999".text.xl4.make(),
+          "\$ ${_cart.totalPrice}"
+              .text
+              .color(context.theme.backgroundColor)
+              .xl4
+              .make(),
           ElevatedButton(
             onPressed: () {
               ScaffoldMessenger.of(context).showSnackBar(
@@ -60,7 +65,7 @@ class __CartListState extends State<_CartList> {
       itemCount: _cart.items?.length,
       itemBuilder: (context, index) => ListTile(
           leading: Icon(Icons.done),
-          title: "Item".text.make(),
+          title: _cart.items[index].name.text.make(),
           trailing: IconButton(
               onPressed: () {}, icon: Icon(Icons.remove_circle_outline))),
     );
