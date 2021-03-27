@@ -1,3 +1,4 @@
+import 'package:catalog/models/cart.dart';
 import 'package:catalog/wigets/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -52,10 +53,11 @@ class _CartList extends StatefulWidget {
 }
 
 class __CartListState extends State<_CartList> {
+  final _cart = CartModel();
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: 5,
+      itemCount: _cart.items?.length,
       itemBuilder: (context, index) => ListTile(
           leading: Icon(Icons.done),
           title: "Item".text.make(),
