@@ -1,10 +1,7 @@
-import 'package:catalog/models/cart.dart';
 import 'package:catalog/models/catalog.dart';
 import 'package:catalog/pages/home_detail_page.dart';
-import 'package:catalog/utils/routes.dart';
 import 'package:catalog/wigets/home_widget/add_to_cart.dart';
 import 'package:catalog/wigets/home_widget/catalog_image.dart';
-import 'package:catalog/wigets/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -68,4 +65,3 @@ class CatalogItem extends StatelessWidget {
     )).color(context.theme.cardColor).rounded.square(150).p16.make();
   }
 }
-

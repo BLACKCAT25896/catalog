@@ -25,7 +25,7 @@ class DetailsPage extends StatelessWidget {
             buttonPadding: EdgeInsets.zero,
             children: [
               "\$ ${catalog.price}".text.bold.xl4.red800.make(),
-              AddToCart(catalog: catalog).wh(100, 40),
+              AddToCart(catalog: catalog),
             ],
           ).p16(),
         ),
