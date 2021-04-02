@@ -8,20 +8,37 @@ import 'package:velocity_x/velocity_x.dart';
 class CatalogList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      shrinkWrap: true,
-      itemCount: CatalogModel.items.length,
-      itemBuilder: (context, index) {
-        final catalog = CatalogModel.items[index];
-        return InkWell(
-          onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => DetailsPage(catalog: catalog))),
-          child: CatalogItem(catalog: catalog),
-        ).pSymmetric(v: 8, h: 4);
-      },
-    );
+    return !context.isMobile
+        ? GridView.builder(
+            gridDelegate:
+                SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+            shrinkWrap: true,
+            itemCount: CatalogModel.items.length,
+            itemBuilder: (context, index) {
+              final catalog = CatalogModel.items[index];
+              return InkWell(
+                onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => DetailsPage(catalog: catalog))),
+                child: CatalogItem(catalog: catalog),
+              ).pSymmetric(v: 8, h: 4);
+            },
+          )
+        : ListView.builder(
+            shrinkWrap: true,
+            itemCount: CatalogModel.items.length,
+            itemBuilder: (context, index) {
+              final catalog = CatalogModel.items[index];
+              return InkWell(
+                onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => DetailsPage(catalog: catalog))),
+                child: CatalogItem(catalog: catalog),
+              ).pSymmetric(v: 8, h: 4);
+            },
+          );
   }
 }
 
@@ -33,15 +50,13 @@ class CatalogItem extends StatelessWidget {
         super(key: key);
   @override
   Widget build(BuildContext context) {
-    return VxBox(
-        child: Row(
-      children: [
-        Hero(
-          tag: Key(catalog.id.toString()),
-          child: CatalogIMage(image: catalog.image),
-        ),
-        Expanded(
-            child: Column(
+    var children2 = [
+      Hero(
+        tag: Key(catalog.id.toString()),
+        child: CatalogIMage(image: catalog.image),
+      ),
+      Expanded(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -60,8 +75,17 @@ class CatalogItem extends StatelessWidget {
               ],
             ).pOnly(right: 8.0)
           ],
-        ))
-      ],
-    )).color(context.theme.cardColor).rounded.square(150).p16.make();
+        ).p(context.isMobile ? 0 : 16),
+      ),
+    ];
+    return VxBox(
+      child: context.isMobile
+          ? Row(
+              children: children2,
+            )
+          : Column(
+              children: children2,
+            ),
+    ).color(context.theme.cardColor).rounded.square(150).p16.make();
   }
 }

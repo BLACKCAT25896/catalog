@@ -14,6 +14,6 @@ class CatalogIMage extends StatelessWidget {
         .color(context.theme.canvasColor)
         .make()
         .p16()
-        .w40(context);
+        .wPCT(context: context, widthPCT: context.isMobile ? 40 : 15);
   }
 }

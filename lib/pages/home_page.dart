@@ -7,6 +7,7 @@ import 'package:catalog/wigets/home_widget/catalog_header.dart';
 import 'package:catalog/wigets/home_widget/catalog_list.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:http/http.dart' as http;
 
@@ -16,7 +17,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final url = "https://api.jsonbin.io/b/6063697e18592d461f037f51";
+  final url = "https://api.jsonbin.io/b/6066b7d20ff4a63dc827720a/2";
   @override
   void initState() {
     super.initState();
@@ -24,8 +25,9 @@ class _HomePageState extends State<HomePage> {
   }
 
   loadData() async {
-    await Future.delayed(Duration(seconds: 5));
-    // var catalogData = await rootBundle.loadString("assets/files/catalog.json");
+    await Future.delayed(Duration(seconds: 2));
+    // final catalogJson =
+    //     await rootBundle.loadString("assets/files/catalog.json");
 
     final response = await http.get(Uri.parse(url));
     final catalogJson = response.body;
